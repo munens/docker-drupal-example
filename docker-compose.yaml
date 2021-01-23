@@ -6,17 +6,17 @@ services:
     ports:
       - 80:80
     volumes:
-      - modules:/var/www/html/modules
-      - profiles:/var/www/html/profiles
-      - themes:/var/www/html/themes
-      - sites:/var/www/html/sites
+      - drupal-modules:/var/www/html/modules
+      - drupal-profiles:/var/www/html/profiles
+      - drupal-themes:/var/www/html/themes
+      - drupal-sites:/var/www/html/sites
   postgres:
     image: postgres:latest
     environment:
       POSTGRES_PASSWORD: yolo123
 
 volumes:
-  modules:
-  profiles:
-  themes:
-  sites:
+  drupal-modules:
+  drupal-profiles:
+  drupal-themes:
+  drupal-sites:
